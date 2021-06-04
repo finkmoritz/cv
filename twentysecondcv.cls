@@ -18,6 +18,7 @@
 \RequirePackage{pgffor}
 \RequirePackage{marvosym}
 \RequirePackage{parskip}
+\RequirePackage{fontawesome5}
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
@@ -75,6 +76,7 @@
 \newcommand{\profilepic}[1]{\renewcommand{\profilepic}{#1}}
 \newcommand{\cvname}[1]{\renewcommand{\cvname}{#1}}
 \newcommand{\cvjobtitle}[1]{\renewcommand{\cvjobtitle}{#1}}
+\newcommand{\cvgithub}[1]{\renewcommand{\cvgithub}{#1}}
 
 % Command for printing the contact information icons
 \newcommand*\icon[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=1pt, fill=mainblue,mainblue,text=white] (char) {#1};}}
@@ -138,12 +140,13 @@
 		%------------------------------------------------
 
 		\renewcommand{\arraystretch}{1.6}
-		\begin{tabular}{p{0.5cm} @{\hskip 0.5cm}p{5cm}}
-			\ifthenelse{\equal{\cvdate}{}}{}{\textsc{\Large\icon{\Info}} & \cvdate\\}
-			\ifthenelse{\equal{\cvaddress}{}}{}{\textsc{\Large\icon{\Letter}} & \cvaddress\\}
-			\ifthenelse{\equal{\cvnumberphone}{}}{}{\textsc{\Large\icon{\Telefon}} & \cvnumberphone\\}
-			\ifthenelse{\equal{\cvsite}{}}{}{\textsc{\Large\icon{\Mundus}} & \cvsite\\}
-			\ifthenelse{\equal{\cvmail}{}}{}{\textsc{\large\icon{@}} & \href{mailto:\cvmail}{\cvmail}}
+		\begin{tabular}{c @{\hskip 0.5cm} p{5cm}}
+			\ifthenelse{\equal{\cvdate}{}}{}{\textsc{\Large{\color{mainblue}\faIcon{birthday-cake}}} & \cvdate\\}
+			\ifthenelse{\equal{\cvaddress}{}}{}{\textsc{\Large{\color{mainblue}\faIcon{map-marker}}} & \cvaddress\\}
+			\ifthenelse{\equal{\cvnumberphone}{}}{}{\textsc{\Large{\color{mainblue}\faIcon{mobile}}} & \cvnumberphone\\}
+			\ifthenelse{\equal{\cvsite}{}}{}{\textsc{\Large{\color{mainblue}\faIcon{globe}}} & \cvsite\\}
+			\ifthenelse{\equal{\cvmail}{}}{}{\textsc{\Large{\color{mainblue}\faIcon{envelope}}} & \href{mailto:\cvmail}{\cvmail}\\}
+			\ifthenelse{\equal{\cvgithub}{}}{}{\textsc{\Large{\color{mainblue}\faIcon{github}}} & \cvgithub}
 		\end{tabular}
 
 		%------------------------------------------------
