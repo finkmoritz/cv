@@ -142,10 +142,10 @@
 		\renewcommand{\arraystretch}{1.6}
 		\begin{tabular}{c @{\hskip 0.5cm} p{5cm}}
 			\ifthenelse{\equal{\cvdate}{}}{}{\textsc{\Large{\color{mainblue}\faIcon{birthday-cake}}} & \cvdate\\}
-			\ifthenelse{\equal{\cvaddress}{}}{}{\textsc{\Large{\color{mainblue}\faIcon{map-marker}}} & \cvaddress\\}
-			\ifthenelse{\equal{\cvnumberphone}{}}{}{\textsc{\Large{\color{mainblue}\faIcon{mobile}}} & \cvnumberphone\\}
-			\ifthenelse{\equal{\cvsite}{}}{}{\textsc{\Large{\color{mainblue}\faIcon{globe}}} & \cvsite\\}
+			\ifthenelse{\equal{\cvaddress}{}}{}{\textsc{\Large{\color{mainblue}\faIcon{map-marker-alt}}} & \cvaddress\\}
+			\ifthenelse{\equal{\cvnumberphone}{}}{}{\textsc{\Large{\color{mainblue}\faIcon{mobile-alt}}} & \cvnumberphone\\}
 			\ifthenelse{\equal{\cvmail}{}}{}{\textsc{\Large{\color{mainblue}\faIcon{envelope}}} & \href{mailto:\cvmail}{\cvmail}\\}
+			\ifthenelse{\equal{\cvsite}{}}{}{\textsc{\Large{\color{mainblue}\faIcon{globe}}} & \cvsite\\}
 			\ifthenelse{\equal{\cvgithub}{}}{}{\textsc{\Large{\color{mainblue}\faIcon{github}}} & \cvgithub}
 		\end{tabular}
 
@@ -181,31 +181,9 @@
 	\tikz[baseline=(char.base)]\node[anchor=north west, draw,rectangle, rounded corners, inner sep=1.6pt, minimum size=5.5mm, text height=3.6mm, fill=#2,#2,text=white](char){#1};%
 }
 
-\newcounter{colorCounter}
-\newcommand{\sectioncolor}[1]{%
-	{%
-		\round{#1}{
-			\ifcase\value{colorCounter}%
-			maingray\or%
-			mainblue\or%
-			maingray\or%
-			mainblue\or%
-			maingray\or%
-			mainblue\or%
-			maingray\or%
-			mainblue\or%
- 			maingray\or%
-			mainblue\else%
-			maingray\fi%
-		}%
-	}%
-	\stepcounter{colorCounter}%
-}
-
 \renewcommand{\section}[1]{
 	{%
-		\color{gray}%
-		\Large\sectioncolor{#1}%
+		\Large\round{#1}{mainblue}
 	}
 }
 
