@@ -152,7 +152,7 @@
 		%------------------------------------------------
 		
 		\ifthenelse{\equal{\aboutme}{}}{}{
-			\profilesection{About me}
+			\profilesection{About Me}
 			\begin{flushleft}
 				\aboutme
 			\end{flushleft}
@@ -160,7 +160,7 @@
 
 		%------------------------------------------------
 
-		\profilesection{Skills}
+		\profilesection{Top Skills}
 
 		\skills
 		\skillstext

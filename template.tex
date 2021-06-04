@@ -32,10 +32,10 @@
 \profilepic{img/moritz.jpg} % Profile picture
 
 \cvname{Moritz Fink} % Your name
-\cvjobtitle{Software Engineer} % Job title/career
+\cvjobtitle{Agile Software Engineer} % Job title/career
 
 \cvdate{30 June 1992} % Date of birth
-\cvaddress{Unterschlei{\ss}heim, M\"unchen} % Short address/location, use \newline if more than 1 line is required
+\cvaddress{Unterschlei{\ss}heim, Munich} % Short address/location, use \newline if more than 1 line is required
 \cvnumberphone{+49 175 5761077} % Phone number
 \cvsite{https://finkmoritz.github.io} % Personal website
 \cvmail{fink.moritz@gmail.com} % Email address
@@ -56,12 +56,16 @@
 %----------------------------------------------------------------------------------------
 
 % Skill bar section, each skill must have a value between 0 an 6 (float)
-\skills{{Java + Kotlin/5.5},{Flutter (Dart)/5.0},{Agile (Scrum, Kanban)/5.0}}
+\skills{{Agile (Scrum, Kanban)/5.0},{Flutter (Dart)/5.0},{Java/5.5}}
 
 %------------------------------------------------
 
 % Skill text section, each skill must have a value between 0 an 6
-\skillstext{{SQL,},{JavaScript,},{DevOps,},{VCS (Git, SVN),},{C++ \& Qt,},{Unix / Linux / macOS / Windows}}
+\skillstext{
+	{SQL,},{JavaScript,},{DevOps,},{AWS,},{VCS (Git, SVN),},{C++ \& Qt,},{Unix / Linux / macOS / Windows\\~\\},
+	{German,},{English\\~\\},
+	{Team Player,},{Ideator,},{Strategist}
+}
 
 %----------------------------------------------------------------------------------------
 
@@ -76,7 +80,7 @@
 
 \begin{twenty} % Environment for a list with descriptions
 	\twentyitem{2017 - now}{Application Development Specialist}{Accenture / Solutions IQ}{Since end of 2017, I am working at one of the biggest professional services companies in the world. Beside the possibilities to develop my skills during numerous courses, trainings and certifications, I am also having the chance to apply those skills for a large automotive company and help them in transforming into an agile enterprise with modern software development solutions.}
-	\twentyitem{2017}{Software Engineering Trainee}{Accenture}{Before fully joining Accenture, I took part in a two month trainee programme composed of many deep dive courses on technical and non-technical topics that eventually got me more job ready and excited than I already was before.}
+	\twentyitem{2017}{Software Engineering Trainee}{Accenture}{Before fully joining Accenture, I took part in a two month trainee programme composed of many deep dive courses on technical and non-technical topics.}
 \end{twenty}
 
 
@@ -124,11 +128,17 @@
 
 \subsection{Flutter}
 
-Apps and packages
+Besides the many Flutter repositories that you can find on my Github page, I also developed two cross-platform apps that are available in app stores (Apple \& Google):
+\begin{itemize}
+\item \textbf{Stockenfelser Bierfreunde}: Social media app with status posts, event notifications, image upload, etc. that was developed to help building a local community in my hometown. Uses a REST API created with Spring Boot and connecting to a MariaDB database.
+\item \textbf{Conway}: Board game that uses mechanics from Conway's game of life in a multiplayer scenario against A.I. bots (using a modified MonteCarlo Tree Search). Graphics are rendered with Flame.
+\end{itemize}
+Additionally, I created the \href{https://pub.dev/packages/flutter_amplify_auth_ui}{flutter\_amplify\_auth\_ui} package (published on  \href{https://pub.dev/packages/flutter_amplify_auth_ui}{pub.dev}) that automatically generates authentication widget templates based on the developer's AWS Amplify CLI Authentication configuration.
 
 \subsection{Web}
 
-Websites
+I developed and currently maintain my personal homepage (\href{https://finkmoritz.github.io}{finkmoritz.github.io}) and a local society's website (\href{https://www.stockenfelser-bierfreunde.de}{stockenfelser-bierfreunde.de}).
+\\
 
 
 %----------------------------------------------------------------------------------------
@@ -137,7 +147,7 @@ Websites
 
 \section{~{\normalsize\faIcon{grin}} Interests~~}
 
-When I am not coding until late at night, I usually rock out on my guitar.
+When I am not coding or exploring new programming tools, frameworks and languages until late at night, I usually rock out on my guitar.
 
 
 %----------------------------------------------------------------------------------------
