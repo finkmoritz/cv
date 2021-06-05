@@ -99,7 +99,7 @@
 	\renewcommand{\skillstext}{
 		\begin{flushleft}
 			\foreach [count=\i] \x in {#1}{ 
-				\x
+				\textbf{\x}
 			}
 		\end{flushleft}
 	}
@@ -178,12 +178,14 @@
 
 % Command to create the rounded boxes around the first three letters of section titles
 \newcommand*\round[2]{%
-	\tikz[baseline=(char.base)]\node[anchor=north west, draw,rectangle, rounded corners, inner sep=1.6pt, minimum size=5.5mm, text height=3.6mm, fill=#2,#2,text=white](char){#1};%
+	\tikz[baseline=(char.base)]\node[anchor=north west, draw, thick, rectangle, rounded corners, inner sep=1.6pt, minimum size=5.5mm, text height=3.6mm, fill=#2,#2,text=white](char){#1};%
 }
 
 \renewcommand{\section}[1]{
 	{%
-		\Large\round{#1}{mainblue}
+		\begin{center}
+			\Large\round{~~~~~~~~~~#1~~~~~~~~~~}{mainblue}
+		\end{center}
 	}
 }
 
@@ -213,6 +215,14 @@
 		\hfill%
 		{\footnotesize#3}\\%
 		#4\vspace{\parsep}%
+	}\\
+}
+
+\newcommand{\twentyitemheaderonly}[3]{%
+	#1&\parbox[t]{0.83\textwidth}{%
+		\textbf{#2}%
+		\hfill%
+		{\footnotesize#3}%
 	}\\
 }
 
