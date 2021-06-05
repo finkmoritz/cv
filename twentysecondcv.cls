@@ -86,8 +86,8 @@
 	\renewcommand{\skills}{
 		\begin{tikzpicture}
 			\foreach [count=\i] \x/\y in {#1}{
-				\draw[fill=maingray,maingray] (0,\i) rectangle (6,\i+0.4);
-				\draw[fill=white,mainblue](0,\i) rectangle (\y,\i+0.4);
+				\draw[rounded corners, fill=maingray,maingray] (0,\i) rectangle (6,\i+0.4);
+				\draw[rounded corners, fill=white,mainblue](0,\i) rectangle (\y,\i+0.4);
 				\node [above right] at (0,\i+0.4) {\x};
 			}
 		\end{tikzpicture}
