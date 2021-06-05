@@ -178,13 +178,13 @@
 
 % Command to create the rounded boxes around the first three letters of section titles
 \newcommand*\round[2]{%
-	\tikz[baseline=(char.base)]\node[anchor=north west, draw, thick, rectangle, rounded corners, inner sep=1.6pt, minimum size=5.5mm, text height=3.6mm, fill=#2,#2,text=white](char){#1};%
+	\tikz[baseline=(char.base)]\node[anchor=north west, draw, thick, rectangle, rounded corners, inner sep=1.6pt, minimum size=5.5mm, text height=3.6mm, fill=#2,#2,text=white, minimum width=6cm](char){#1};%
 }
 
 \renewcommand{\section}[1]{
 	{%
 		\begin{center}
-			\Large\round{~~~~~~~~~~#1~~~~~~~~~~}{mainblue}
+			\Large\round{#1}{mainblue}
 		\end{center}
 	}
 }
