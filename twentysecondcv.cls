@@ -154,7 +154,9 @@
 		\ifthenelse{\equal{\aboutme}{}}{}{
 			\profilesection{About Me}
 			\begin{flushleft}
-				\aboutme
+				\begin{justify}
+					\aboutme
+				\end{justify}
 			\end{flushleft}
 		}
 
