@@ -37,8 +37,6 @@
 %	 MISC CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\renewcommand{\bfseries}{\color{gray}} % Make \textbf produce coloured text instead
-
 \pagestyle{empty} % Disable headers and footers
 
 \setlength{\parindent}{0pt} % Disable paragraph indentation
@@ -49,6 +47,8 @@
 
 \setlength{\TPHorizModule}{1cm} % Left margin
 \setlength{\TPVertModule}{1cm} % Top margin
+
+\setlength\emergencystretch\textwidth
 
 \newlength\imagewidth
 \newlength\imagescale
@@ -195,7 +195,7 @@
 
 \renewcommand{\subsection}[1]{
 	\par\vspace{.5\parskip}{%
-		\large\color{gray} #1%
+		\large\color{mainblue} #1%
 	}
 	\par\vspace{.25\parskip}%
 }
