@@ -111,7 +111,7 @@
 
 \newcommand{\makeprofile}{
 	\begin{tikzpicture}[remember picture,overlay]
-   		\node [rectangle, fill=sidecolor, anchor=north, minimum width=9cm, minimum height=\paperheight+1cm] (box) at (-5cm,0.5cm){};
+   		\node [rectangle, rounded corners=1.5cm, fill=sidecolor, anchor=north, minimum width=9cm, minimum height=\paperheight+1.5cm] (box) at (-5cm,0.5cm){};
 	\end{tikzpicture}
 
 	%------------------------------------------------
