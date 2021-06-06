@@ -29,9 +29,9 @@
 
 \definecolor{white}{RGB}{255,255,255}
 \definecolor{gray}{HTML}{4D4D4D}
-\definecolor{sidecolor}{HTML}{E7E7E7}
+\definecolor{sidecolor}{HTML}{0E5484}
 \definecolor{mainblue}{HTML}{0E5484}
-\definecolor{maingray}{HTML}{B9B9B9}
+\definecolor{maingray}{HTML}{D9D9D9}
 
 %----------------------------------------------------------------------------------------
 %	 MISC CONFIGURATIONS
@@ -63,7 +63,7 @@
 	\addtolength\TotalSectionLength{-\SectionTitleLength}% Subtract the section title width from the total width
 	\addtolength\TotalSectionLength{-2.22221pt}% Modifier to remove overfull box warning
 	\vspace{8pt}% Whitespace before the section title
-	{\color{black!80} \huge #1 \rule[0.15\baselineskip]{\TotalSectionLength}{1pt}}% Print the title and auto-width rule
+	{\color{white!80} \huge #1 \rule[0.15\baselineskip]{\TotalSectionLength}{1pt}}% Print the title and auto-width rule
 }
 
 % Define custom commands for CV info
@@ -86,8 +86,8 @@
 	\renewcommand{\skills}{
 		\begin{tikzpicture}
 			\foreach [count=\i] \x/\y in {#1}{
-				\draw[rounded corners, fill=maingray,maingray] (0,\i) rectangle (6,\i+0.4);
-				\draw[rounded corners, fill=white,mainblue](0,\i) rectangle (\y,\i+0.4);
+				\draw[rounded corners, fill=maingray,gray] (0,\i) rectangle (6,\i+0.4);
+				\draw[rounded corners, fill=white,maingray](0,\i) rectangle (\y,\i+0.4);
 				\node [above right] at (0,\i+0.4) {\x};
 			}
 		\end{tikzpicture}
@@ -99,7 +99,7 @@
 	\renewcommand{\skillstext}{
 		\begin{flushleft}
 			\foreach [count=\i] \x in {#1}{ 
-				\textbf{\x}
+				\x
 			}
 		\end{flushleft}
 	}
@@ -117,6 +117,8 @@
 	%------------------------------------------------
 
 	\begin{textblock}{6}(0.5, 0.2)
+	
+		\color{maingray}
 			
 		%------------------------------------------------
 		
@@ -131,22 +133,22 @@
 
 		%------------------------------------------------
 
-		{\Huge\color{mainblue}\cvname}
+		{\Huge\color{white}\cvname}
 
 		%------------------------------------------------
 
-		{\Large\color{black!80}\cvjobtitle}
+		{\Large\color{white!80}\cvjobtitle}
 
 		%------------------------------------------------
 
 		\renewcommand{\arraystretch}{1.6}
 		\begin{tabular}{c @{\hskip 0.5cm} p{5cm}}
-			\ifthenelse{\equal{\cvdate}{}}{}{\textsc{\Large{\color{mainblue}\faIcon{birthday-cake}}} & \cvdate\\}
-			\ifthenelse{\equal{\cvaddress}{}}{}{\textsc{\Large{\color{mainblue}\faIcon{map-marker-alt}}} & \cvaddress\\}
-			\ifthenelse{\equal{\cvnumberphone}{}}{}{\textsc{\Large{\color{mainblue}\faIcon{mobile-alt}}} & \cvnumberphone\\}
-			\ifthenelse{\equal{\cvmail}{}}{}{\textsc{\Large{\color{mainblue}\faIcon{envelope}}} & \href{mailto:\cvmail}{\cvmail}\\}
-			\ifthenelse{\equal{\cvsite}{}}{}{\textsc{\Large{\color{mainblue}\faIcon{globe}}} & \cvsite\\}
-			\ifthenelse{\equal{\cvgithub}{}}{}{\textsc{\Large{\color{mainblue}\faIcon{github}}} & \cvgithub}
+			\ifthenelse{\equal{\cvdate}{}}{}{\textsc{\Large{\faIcon{birthday-cake}}} & \cvdate\\}
+			\ifthenelse{\equal{\cvaddress}{}}{}{\textsc{\Large{\faIcon{map-marker-alt}}} & \cvaddress\\}
+			\ifthenelse{\equal{\cvnumberphone}{}}{}{\textsc{\Large{\faIcon{mobile-alt}}} & \cvnumberphone\\}
+			\ifthenelse{\equal{\cvmail}{}}{}{\textsc{\Large{\faIcon{envelope}}} & \href{mailto:\cvmail}{\cvmail}\\}
+			\ifthenelse{\equal{\cvsite}{}}{}{\textsc{\Large{\faIcon{globe}}} & \cvsite\\}
+			\ifthenelse{\equal{\cvgithub}{}}{}{\textsc{\Large{\faIcon{github}}} & \cvgithub}
 		\end{tabular}
 
 		%------------------------------------------------
